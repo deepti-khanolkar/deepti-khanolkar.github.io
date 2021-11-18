@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Padding, Border, Margin</title>
+    <meta charset="UTF-8">
+    <link href="/styles/main.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap" rel="stylesheet">
+    <style>
+      .text_font{
+         font-family: 'Syncopate', sans-serif;
+      }
+      .container {
+  font-family: arial;
+  font-size: 24px;
+  margin-left: 150px;
+  margin-right:300px;
+  margin-bottom:300px;  
+  height: 200px;
+ width:75%;
+}
+.child {
+  background-color: rgb(206, 204, 240);
+  /* Center horizontally*/
+ width:100%;
+ margin:auto;
+}     
+    </style>
+  </head>
+  
+  <body >
+    <p><a href="https://deepti-khanolkar.github.io/index.html" class="text_font">Back to Home</a></p>
+    
+    <div class="container" style="text-align: center; ">
+    <div class="child">
+        <h1>What's the difference between margin, border and padding?</h1>
+    <h2>This question is quite a common question amongst HTML-CSS programmers. Well, I have done a good research to explain this in as simple way as I can.
+
+    </br>Now let’s start!!!!
+    </h2>
+        <p style="text-align:left;">‘Border’ is the strip that goes around your content. ‘Padding’ is the space between the content and the border. ‘Margin’ is the space outside the border.
+        </br>So, Content+Padding+Border+Margin=Total Space
+        </p>
+        <p style="background-color:white;">
+        <img src="Box_model.JPG" alt="Image of Box Model">
+        </p>
+        <p style="text-align:left;"><strong>Let’s take an example for our everyday life.</br></strong>
+            Imagine that you have a set of framed and matted photographs hanging on a wall.
+            Each photo is surrounded by a mat that puts space between the photo and the frame. That space would be the padding.
+            The frame encloses the mat and the image. That would be the border.
+            Each picture has a set amount of space around the outside. That is the margin. If two pictures are hanging side by side with four inches between them, then we might say that they each have a two inch margin. The margin is the distance between an element and something else.
+            We have to remember that the width is assigned to the content of the element and does not include the padding or border. If you want to know how much space the element would take up you need to remember to add the width of the padding and border. An element that is 100px wide with a 1px border and 10px of padding takes up 122px of horizontal space. 
+        </p>
+        <p style="text-align:left;"><strong>Let’s delve into coding now. Here is a div without padding:</strong>
+        </br>It is exactly 100px x 100px</p>
+        <p style="background-color:white;"><img src="NoPadding.JPG" alt="Image with no padding"></p>
+        <p style="text-align:left;"><strong>Here is a div with 10px of padding on all four sides</strong>  
+        </br>Notice that the text no longer sits at the left-most edge.</p>   
+        <p style="background-color:white;"><img src="Padding.JPG" alt="Image with padding"></p>
+        <p style="text-align:left;"><strong>Now here’s two divs</strong>
+        </br>How can I tell my divs apart?</p>   
+        <p style="background-color:white;"><img src="TwoDivs.JPG" alt="Image with 2 divs"></p>
+        <p style="text-align:left;"><strong>Let’s add some border</strong></p>
+        <p style="background-color:white;"><img src="Border.JPG" alt="Image with border"></p>
+        <p style="text-align:left;"><strong>Now we’re learning something! Padding is the inside of the box. It manages the spacing between whatever’s inside, all the way to the border.
+    </br>So who’s in charge on the other side of the border?</strong></p>
+        <p style="text-align:left;">Let’s set margin: 10px and find out:</p> 
+         <p style="background-color:white;"><img src="Margin.JPG" alt="Image with margin"></p>
+        <p style="text-align:left;"><strong>Margin is the spacing on the outside of the element!</strong></p>
+        <p style="text-align:left;"><strong>But how do we decide when to use margin or padding.</strong>
+        </br>Let's assume that you have a div with proportions 200px x 200px with black background color.
+                Differences:
+                Margin: 10px;
+                Your div will have proportions 200px x 200px with background color black and it will have 10px margin from all sides (10px of free space).
+                Padding: 10px;
+                Your div will have proportions 200px x 200px plus 10px from padding with background color black, so it will actually look like 220px x 220px.
+                So basically I think that you use:
+                •	Margin if you want to position some div. I might use margin to create a layout for website.
+                •	Padding if you want a space around your div/button/table/image for better displaying (ux).
+            
+        </p> 
+    </div> 
+</div>
+  </body>
+</html>
