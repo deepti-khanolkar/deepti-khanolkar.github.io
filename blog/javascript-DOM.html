@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="../styles/main.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap" rel="stylesheet">
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.css" rel="stylesheet">
+        <title>Javascript-DOM</title>
+        <style>
+            .text_font{
+                font-family: 'Syncopate', sans-serif;
+            }
+            .container {
+                display: flex;
+                flex-flow: row wrap;
+            }
+            .header, .blog, .sidebar, .footer {
+                flex-grow: 1;
+                flex-basis: 100%;
+            }
+            
+            @media all and (min-width: 600px) {
+            /* if screen > 600px sidebar appears alongside blog getting 1/3rd of space */
+                .blog { flex: 2 0px; }
+                .sidebar { flex: 1 0px; }
+            }
+            @media all and (min-width: 800px) {
+            /* On bigger screens, sidebar now only gets 1/4 of space */
+                .blog { flex: 3 0px; }
+                .sidebar { flex: 1 0px; }
+            }
+        </style>
+    </head>
+    <body>
+        <p><a href="https://deepti-khanolkar.github.io/index.html" class="text_font">Back to Home</a></p> 
+        <div class="container">
+            <div class="header text_font">
+              <h1>Javascript-DOM</h1>   
+            </div>
+            <div class="blog">
+                <h3 id="HTML-CSS">HTML-CSS</h3>
+                <p>Hypertext Markup Language (HTML) is the language of the web, without HTML you wouldn’t have a website. HTML defines the content and structure of your website. 
+                Using a body for an analogy, HTML would be your skeleton, holding everything together and providing a base to hang everything off.
+                If HTML is the skeleton to our body, then Cascading Style Sheets (CSS) is the skin. 
+                CSS is used to change the look and feel of websites. It is where you define your colour schemes, fonts, spacing, layouts and more. 
+                </p>
+                <img src="html-css.JPG" alt="Image showing HTML skeleton and CSS skin">
+                </br></br>
+                <h3 id="Control-Flow-and-Loops">Control Flow and Loops</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Control Flow Structures are an important aspect of programming languages that allow your code to take certain actions based on a variety of scenarios. My personal favorite example of control flow and loop is the human body. In normal conditions, our body maintains an ideal temperature but when you get cold, your body shivers to heat up. Similarly, when you’re too hot, you sweat to cool down. This goes on in a loop till the body has reached a desired temperature. The process restarts if the temperature changes.
+                        Another example is the temperature control for a house. When the temperature of the house falls too low, the thermostat measures it and turns on a heater. When the temperature of the house is OK, the thermostat measures it and turns off a heater. When the temperature is too high, it turns on an AC.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="control-loop.JPG" alt="Image of flowchart">
+                    </div>
+                </div>
+                </br></br>
+                <h3 id="DOM">What is the DOM?</h3>
+                <p><strong>Imagine this:</strong> you have the TV on. You don't like the show that's being streamed, and you want to change it. You also want to increase its volume.
+                    To do that, there has to be a way for you to interact with your television. And what do you use to do that?
+                    "<em>A remote</em>".
+                    The remote serves as the bridge which allows you interact with your television.
+                    You make the TV active and dynamic via the remote. And in the same way, JavaScript makes the HTML page active and dynamic via the DOM.
+                    Just like how the television can't do much for itself, JavaScript doesn't do much more than allow you to perform some calculations or work with basic strings.
+                    So to make an HTML document more interactive and dynamic, the script needs to be able to access the contents of the document and it also needs to know when the user is interacting with it.
+                    It does this by communicating with the browser using the properties, methods, and events in the interface called the Document Object Model, or DOM.
+                    For example, say that you want a button to change colours when it gets clicked or an image to slide when the mouse hovers over it. First, you need to reference those elements from your JavaScript.
+                    The DOM is a tree-like representation of the web page that gets loaded into the browser.
+                    It represents the web page using a series of objects. The main object is the document object, which in turn houses other objects which also house their own objects, and so on.
+                </p>
+                <img src="DOM-tree.JPG" alt="DOM-tree">
+                <p><strong>Summary:</strong>
+                    The DOM is a top down representation of all the elements that make up a web page. It's the interface through which your script interacts with your HTML.
+                    There are many properties and methods which you can use to get information about the DOM and manipulate it.
+                </p>
+                <strong>How do we interact with DOM? - Finding the Developer Tools in your browser</strong>              
+                Though your browser does not show you the DOM Tree as a “tree” like we saw earlier, you can see the browser’s rendition of the DOM Tree in the Developer Tools.
+                <ul>In Chrome, you can access the Developer Tools by 
+                    <li>clicking on the three vertical dots at the top right corner of the browser, and navigating to More Tools > Developer Tools. </li>
+                    <li>You can also right click anywhere on the browser screen, and click on “Inspect.” </li>
+                    <li>You can simply press F12 key on your keyboard</li>
+                    <li>Or press Ctrl + Shift + J</li>
+                </ul>
+                <img src="DOM-interact.JPG" alt="DOM-interaction window">
+                </br></br>
+                <h3 id="Arrays-Objects">Arrays and Objects</h3>
+                <strong>Arrays:</strong> Arrays consist of an ordered collection or list containing zero or more data types, and use numbered indices starting from 0 to access specific items.
+                <p><strong>Declaring an array:</strong></br><img src="declare-array.JPG" alt="Declaring array"></p>
+                <p><strong>Modifying Items in Arrays:</strong>
+                    We can overwrite any value in an array by assigning a new value using the assignment operator, just like we would with a regular variable.
+                </br><img src="mod-array.JPG" alt="Modifying array">
+                </p>
+                <p><strong>Adding an Item to an Array:</strong>
+                    push() - This method adds items to the end of an array and changes the original array.
+                    </br><img src="add-array.JPG" alt="Adding items in the array">
+                </p>
+                <p><strong>Removing an Item from an Array:</strong>
+                    pop() - This method removes the last item of an array and returns it.
+                    </br><img src="del-array.JPG" alt="Adding items in the array">
+                </p>
+                </br><strong>Objects:</strong>An object in JavaScript is a data type that is composed of a collection of names or keys and values, represented in name:value pairs. The name:value pairs can consist of properties that may contain any data type — including strings, numbers, and Booleans — as well as methods, which are functions contained within an object.
+                <p><strong>Creating an Object:</strong>
+                <ul>There are two ways to construct an object in JavaScript:
+                    <li>The object literal, which uses curly brackets: {}</li>
+                    <img src="obj-lit.JPG" alt="Object literal">
+                    <li>The object constructor, which uses the new keyword</li>
+                    <img src="obj-const.JPG" alt="Object constructor">
+                </ul>
+                </p>
+                <p><strong>Accessing Object Properties:</strong>
+                <img src="obj-ex.JPG" alt="Object">
+                <ul>There are two ways to access an object’s properties.
+                    <li>Dot notation: .<img src="obj-dot.JPG" alt="Object dot accessing"> </li>
+                    <li>Bracket notation: []<img src="obj-sq.JPG" alt="Object square accessing"></li>
+                </ul>
+                </p>
+                <p><strong>Adding, Modifying and Removing Object Properties</strong>
+                    <img src="obj-add.JPG" alt="Adding into Object">
+                    <img src="obj-mod.JPG" alt="Modifying an Object">
+                    <img src="obj-del.JPG" alt="Deleting from Object">
+                </p>
+                <h3 id="Functions">Functions</h3>
+                We often want to be able to re-execute blocks of code when we are writing programs, without having to re-write the block of code entirely. We need a way of grouping code together and giving it a name, so that we can call it by that name later, and that's what we call a function.
+                To create a function, we must first declare it and give it a name, the same way we'd create any variable, and then we follow it by a function definition:
+                </br><img src="func-dec.JPG" alt="Declaring a function">
+                </br> We could put any code inside that function - one statement, multiple statements - depends on what we want to do. In order for the program to execute the code that's inside the function, we actually have to "call" the function, by writing its name followed by empty parentheses:
+                <img src="func-call.JPG" alt="Calling a function">
+                </br>There's another powerful thing we can do with functions - we can use them to take in some values, compute them, and return a new value. Think about all the things you can do with a calculator - add values, subtract, calculate square root, multiply, etc. All of those would be done with functions that took in the input and output the result. The functions would take in the input as arguments and output the result using a return statement. Here's a function that adds two numbers and returns the result:
+                <img src="func-add.JPG" alt="Function adding two numbers">
+            </div>
+            <div class="sidebar">
+              <h3><a href="#HTML-CSS">HTML-CSS</a></h3>
+              <h3><a href="#Control-Flow-and-Loops">Control Flow and Loops</a></h3>
+              <h3><a href="#DOM">What is the DOM?</a></h3>
+              <h3><a href="#Arrays-Objects">Arrays and Objects</a></h3>
+              <h3><a href="#Functions">Functions</a></h3>
+              
+            </div>
+            </br>
+            <div class="footer" style="background-color: rgb(208, 179, 235); height: 50px; text-align: center;">Deepti Khanolkar - All Rights Reserved</div>
+          </div>
+    </body>
+</html>
